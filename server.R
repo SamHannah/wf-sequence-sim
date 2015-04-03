@@ -42,13 +42,13 @@ shinyServer(
                         labs(x="Test Items", y="Mean P('old')")+themePro+theme(legend.position="none")
 
       crit<- ggplot(outs[[4]], aes(Trial, Criterion, group=Type,linetype=Type, colour=Type))+geom_line(size=1.0)+
-                        geom_hline(yintercept=0.55, size=1.0)+scale_linetype_manual(name="Initial criterion position",values=c(1,1))+
+                        geom_hline(yintercept=0.5, size=1.0)+scale_linetype_manual(name="Initial criterion position",values=c(1,1))+
                         scale_colour_manual(name="Initial criterion position", values=c("blue","red"))+ylim(0,1)+themePro
       
       outs[[5]]$Test.Item <- as.factor(outs[[5]]$Test.Item)
       outs[[5]]$Test.Item <- factor(outs[[5]]$Test.Item, levels=c("LF Lure", "HF Lure","HF Target","LF Target" ))
       dists<- ggplot(outs[[5]], aes(bins, Count, group=Test.Item,linetype=Test.Item, 
-                        colour=Test.Item))+geom_line(size=0.75)+geom_vline(xintercept=0.55, size=1.0)+
+                        colour=Test.Item))+geom_line(size=0.75)+geom_vline(xintercept=0.5, size=1.0)+
                         scale_linetype_manual(name="Test item",values=c(2,2,1,1))+xlab("Test item intensity")+
                         scale_colour_manual(name="Test item", values=c("blue","red","red", "blue"))+xlim(0.225,1.05)+themePro
       
