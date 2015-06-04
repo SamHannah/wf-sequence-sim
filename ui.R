@@ -1,11 +1,11 @@
 shinyUI(fluidPage(
-  titlePanel("Word frequency sequence effect simulator"),
+  titlePanel("Word frequency sequence effect simulator--Quartets"),
   
   sidebarLayout(position = "left",
     sidebarPanel(
       fluidRow(
           column(6,
-             helpText("This app runs a simulation of a word frequency sequence experiment using Minerva-AL and the criterion calibration rule for
+             helpText("This app runs a simulation of a word frequency sequence experiment (with LF/HF pairs forming structured quartets) using Minerva-AL and the criterion calibration rule for
               shifting criterion. User supplies a parameter (L) controlling the encoding fidelity of study words, a parameter (A)
               controlling the accessibility of pre-study words, a criterion shift factor (SF) controlling the lability of the criterion, and a 
               decrement parameter (dp) controlling the rate at which this shift factor decreases across trials is set by the decrement parameter (dp)."),
